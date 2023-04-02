@@ -1,6 +1,10 @@
 package pack4;
 import java.util.*;
-
+/*Date: March 30, 2023
+Name: Erin Tomorri
+Teacher: Ms. Katsman
+Description: This program will gather all of the users information and send it to the class, acting like the front end
+*/
 public class main {
     public static void intro() {
         System.out.println("Hello, you are at the  NFL combine, you are here to show your abilities.");
