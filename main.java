@@ -329,6 +329,7 @@ public class main {
                 checkPlayAgain = false;
             }      
         }
+        System.out.println("Bye");
         myScanner.close();
     }
 }
