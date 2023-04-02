@@ -20,6 +20,7 @@ public class projectile {
 
 
     {
+
         distanceXkick = 0;
         distanceYkick = 0;
         distanceXthrow = 0;
@@ -62,6 +63,10 @@ public class projectile {
 
     }
 
+    //Get gravity for chosen planet from main
+    public void setAcceleration(double newGravity){
+        acceleration = newGravity;
+    }
 
     // Set the names of the players
     public void setName(String newName) {
@@ -167,7 +172,7 @@ public class projectile {
             return (names + " threw the ball " + distanceYthrow + " meters high and " + distanceXthrow + " meters away. Time: " + timeThrow);
         }
     }
-    public boolean equals(projectile s){
+    public boolean equals(projectile s){ // checks if balls collided
         if (s.distanceXkick == distanceXkick){
             return true;
         } else if (s.distanceXthrow == distanceXthrow){
