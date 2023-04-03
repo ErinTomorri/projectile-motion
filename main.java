@@ -64,10 +64,10 @@ public class main {
     public static double height(Scanner scanner) {//determine the height which you throw the ball
 
 
-        System.out.println("At what height are you throwing the ball in meters (Include your height also): ");
+        System.out.println("At what height are you throwing the ball in meters: ");
         double height = scanner.nextDouble();
         while (height < 0) {
-            System.out.println("At what height are you throwing the ball in meters (Include your height also): ");
+            System.out.println("At what height are you throwing the ball in meters: ");
             height = scanner.nextDouble();
         }
         return height;
