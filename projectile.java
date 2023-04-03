@@ -76,11 +76,11 @@ public class projectile {
         return names;
     }
     public void setDistanceFromDummyKick(){
-        distanceFromDummy = Math.abs(distanceXkick - dummy);
+        distanceFromDummy = distanceXkick - dummy;
     }
     
     public void setDistanceFromDummyThrow(){
-        distanceFromDummy = Math.abs(distanceXthrow - dummy);
+        distanceFromDummy = distanceXthrow - dummy;
     }
 
     // Get velocity from main user input
