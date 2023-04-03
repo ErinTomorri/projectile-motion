@@ -3,7 +3,7 @@ import java.util.*;
 
 public class main {
     public static void intro() {
-        System.out.println("Hello, you are at the  NFL combine, you are here to show your abilities.");
+        System.out.println("Hello, you are at the NFL combine, you are here to show your abilities.");
         System.out.println("This is a critical event for aspiring football players, as it provides a platform to showcase their skills and potentially get drafted to play for an NFL team. The combine tests players in a variety of physical and mental drills.");
         System.out.println("Your performance here could have a significant impact on your future in football, so make sure to give it your all and leave a lasting impression on the scouts and coaches in attendance. Good luck! ");
     }
@@ -126,7 +126,7 @@ public class main {
     }
     public static void overshotThrow(){//display the parabola of the shot 
         //its very hard to make a parabola
-        System.out.println("You hit undershot the target");
+        System.out.println("You hit overshot the target");
         System.out.println("        ... ");
         System.out.println("       .   .");
         System.out.println("      .     .");
@@ -178,7 +178,7 @@ public class main {
     }
     public static void overshot(){//display the parabola of the shot 
         //its very hard to make a parabola
-        System.out.println("You hit undershot the target");
+        System.out.println("You overshot the target");
         System.out.println("        ... ");
         System.out.println("       .   .");
         System.out.println("      .     .");
@@ -201,12 +201,40 @@ public class main {
         System.out.println(" .                      .");
         System.out.println(".               #            .");
     }
+    public static void menu(){
+        System.out.println("███╗░░░███╗███████╗███╗░░██╗██╗░░░██╗");
+        System.out.println("████╗░████║██╔════╝████╗░██║██║░░░██║");
+        System.out.println("██╔████╔██║█████╗░░██╔██╗██║██║░░░██║");
+        System.out.println("██║╚██╔╝██║██╔══╝░░██║╚████║██║░░░██║║");
+        System.out.println("██║░╚═╝░██║███████╗██║░╚███║╚██████╔╝║");
+        System.out.println("╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░╚═════╝░");
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println("█▄▀ █ █▀▀ █▄▀");;
+        System.out.println("█░█ █ █▄▄ █░█");; //idk why it wants it with double semicolons
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println("█▀█ █▀█");;
+        System.out.println("█▄█ █▀▄");;
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println(" ");;
+
+        System.out.println("▀█▀ █░█ █▀█ █▀█ █░█░█");;
+        System.out.println("░█░ █▀█ █▀▄ █▄█ ▀▄▀▄▀");;
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println(" ");;
+        System.out.println("░Do you want to kick or throw: ");;
+    }
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         boolean checkPlayAgain = true;
         intro();
         while (checkPlayAgain) { // determine if you kick or throw the ball
-            System.out.println("Do you want to throw or kick the ball: ");
+            menu();
             String action = myScanner.next().toLowerCase();
             while (!action.equals("kick") && !action.equals("throw")){ // check if they didnt put kick or throw
                 System.out.println("Do you want to throw or kick the ball: ");
@@ -298,7 +326,11 @@ public class main {
             }
             // display the shots and if they collided with each other
             if(players.length == 2 && players[0].equals(players[1])){
-                collide();
+                if (action.equals("kick")){
+                    collide();
+                }else{
+                    collideThrow();
+                }
             }else if (players.length == 1 && players[0].getDistanceFromDummy() > 0){
                 if (action.equals("kick")){
                     overshot();
@@ -325,6 +357,7 @@ public class main {
                 checkPlayAgain = false;
             }      
         }
+        System.out.println("bye");
         myScanner.close();
     }
 }
