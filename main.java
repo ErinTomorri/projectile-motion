@@ -1,10 +1,6 @@
 package pack4;
 import java.util.*;
-/*Date: March 30, 2023
-Name: Erin Tomorri
-Teacher: Ms. Katsman
-Description: This program will gather all of the users information and send it to the class, acting like the front end
-*/
+
 public class main {
     public static void intro() {
         System.out.println("Hello, you are at the  NFL combine, you are here to show your abilities.");
@@ -51,10 +47,10 @@ public class main {
     public static double dummy(Scanner scanner) { //determine the distance which your dummy is at 
 
 
-        System.out.println("How far is your practice dummy: ");
+        System.out.println("How far is your practice dummy in meters: ");
         double dummy = scanner.nextDouble();
         while (dummy < 0) {
-            System.out.println("What is the angle that the ball is thrown at (must be positive): ");
+            System.out.println("How far is your practice dummy in meters (must be positive): ");
             dummy = scanner.nextDouble();
         }
         return dummy;
@@ -212,7 +208,7 @@ public class main {
         while (checkPlayAgain) { // determine if you kick or throw the ball
             System.out.println("Do you want to throw or kick the ball: ");
             String action = myScanner.next().toLowerCase();
-            while (!action.equals("kick") && !action.equals("throw")){
+            while (!action.equals("kick") && !action.equals("throw")){ // check if they didnt put kick or throw
                 System.out.println("Do you want to throw or kick the ball: ");
                 action = myScanner.next().toLowerCase();
             }
@@ -329,7 +325,6 @@ public class main {
                 checkPlayAgain = false;
             }      
         }
-        System.out.println("Bye");
         myScanner.close();
     }
 }
