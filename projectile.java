@@ -167,9 +167,18 @@ public class projectile {
     // toStirng 
     public String toString(){
         if (distanceXkick != 0){
-            return (names + " kicked the ball " + distanceYkick + " meters high and " + distanceXkick + " meters away. Time: " + timeKick);
+            if (angle == 0){
+            return (names + " kicked the ball " + distanceYkick + " meters high and " + distanceXkick + " meters away. Time: " + timeKick + "seconds");
+            }else{
+                return (names + " kicked the ball " + distanceYkick + " meters high and " + distanceXkick + " meters away. Time: " + timeKick*2 + "seconds");
+            }
         }else{
-            return (names + " threw the ball " + distanceYthrow + " meters high and " + distanceXthrow + " meters away. Time: " + timeThrow);
+            if (angle == 0){
+                return (names + " threw the ball " + distanceYthrow + " meters high and " + distanceXthrow + " meters away. Time: " + timeThrow + "seconds");
+            }else{
+                return (names + " threw the ball " + distanceYthrow + " meters high and " + distanceXthrow + " meters away. Time: " + timeThrow*2 + "seconds");
+                
+            }
         }
     }
     public boolean equals(projectile s){ // checks if balls collided
