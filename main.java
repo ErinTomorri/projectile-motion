@@ -1,6 +1,13 @@
 package pack4;
 import java.util.*;
 
+/*
+Date: April 4, 2023
+Name : Erin Tomorri
+Teacher: Mrs. Katsman
+Description: This program will display the code and allow the user to input their math question
+*/
+
 public class main {
     public static void intro() {
         System.out.println("Hello, you are at the NFL combine, you are here to show your abilities.");
