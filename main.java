@@ -39,7 +39,7 @@ public class Main {
             writer.close();
         } catch (IOException e) { // a basic exception to check if everything works
             e.printStackTrace();
-        }
+        } //to sum up this method writes the final file 
     }
 
     public static int count() { // this opens the file and checks how many projectiles were in the past
@@ -67,7 +67,7 @@ public class Main {
             e.printStackTrace(); // trace the error
         }
         return count;
-    }
+    } //to sum up this method returns the final amount of lines
 
     public static void read(int count, Projectile projectile[]) { // reads the file and allocates the projectiles arrays
                                                                   // filled with the text file
@@ -142,7 +142,7 @@ public class Main {
         } catch (FileNotFoundException e) { // basic catch exceptions
             System.out.println("An error occurred.");
             e.printStackTrace();
-        }
+        } // to sum up this reads the file then converts them into ints, doubles, strings and then it sends them into a projectile class
     }*/
 
     public static void intro() {
