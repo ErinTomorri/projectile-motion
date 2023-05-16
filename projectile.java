@@ -3,13 +3,13 @@ package pack4;
 Date: March 30, 2023
 Name: Davit Najaryan
 Teacher: Ms. Katsman
-Description: This program will calculate various characteristics of projectile motion
+Description: This program will calculate various characteristics of Projectile motion
 */
 
 import java.util.*;
 
 
-public class projectile {
+public class Projectile {
 
 
     // Intilize variables
@@ -43,7 +43,7 @@ public class projectile {
 
 
     // Overload
-    public projectile(String newName, double newHeight, double newVelocity, double newAngle, double newDummy) {
+    public Projectile(String newName, double newHeight, double newVelocity, double newAngle, double newDummy) {
         names = newName;
         velocity = newVelocity;
         angle = (newAngle * Math.PI) / 180;
@@ -55,14 +55,19 @@ public class projectile {
 
 
     //Constructor for simulating a kick
-    public projectile(String newName, double newVelocity, double newAngle, double newDummy) {
+    public Projectile(String newName, double newVelocity, double newAngle, double newDummy) {
         names = newName;
         velocity = newVelocity;
         angle = (newAngle * Math.PI) / 180;
         dummy = newDummy;
 
     }
-
+    public double getDummy(){
+        return dummy;
+    }
+    public double getHeight(){
+        return height;
+    }
     //Get gravity for chosen planet from main
     public void setAcceleration(double newGravity){
         acceleration = newGravity;
@@ -75,6 +80,9 @@ public class projectile {
     public String getNames() {
         return names;
     }
+    public double getAcceleration(){
+        return acceleration;
+    }
     public void setDistanceFromDummyKick(){
         distanceFromDummy = distanceXkick - dummy;
     }
@@ -84,10 +92,15 @@ public class projectile {
     }
 
     // Get velocity from main user input
-    public void getVelocity(double newVelocity) {
+    public void setVelocity(double newVelocity) {
         velocity = newVelocity;
     }
-
+    public double getVelocity() {
+        return velocity;
+    }
+    public double getAngle() {
+        return angle;
+    }
 
     public double getDistanceFromDummy() {
         return distanceFromDummy;
@@ -95,9 +108,12 @@ public class projectile {
 
 
     // Get acceleration from main user input
-    public void getAngle(double newAngle) {
+    public void setAngle(double newAngle) {
         angle = newAngle * Math.PI;
         angle = angle / 180;
+    }
+    public double setAngle() {
+        return angle;
     }
 
 
@@ -181,7 +197,7 @@ public class projectile {
             }
         }
     }
-    public boolean equals(projectile s){ // checks if balls collided
+    public boolean equals(Projectile s){ // checks if balls collided
         if (s.distanceXkick == distanceXkick){
             return true;
         } else if (s.distanceXthrow == distanceXthrow){
