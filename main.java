@@ -15,10 +15,10 @@ Description: This program will display the code and allow the user to input thei
 /*use this if the txt file is empty 
 Names, Distance from dummy, angle, velocity, gravity,height
 1.Erin,20,30,25,9.8,10
- */
+*/
 
 public class Main {
-    public static void write(Projectile projectile[], int numPeople, int count) { // this is the wrting function this
+    /*public static void write(Projectile projectile[], int numPeople, int count) { // this is the wrting function this
                                                                                   // will write over the txt file with
                                                                                   // the new text
         NumberFormat decimal = NumberFormat.getNumberInstance();
@@ -136,13 +136,14 @@ public class Main {
                             + projectile[i].getHeight() + "\n");
                 }
             }
+            System.out.println("Awesome now tell me about your parabolas/projectiles \n");
             myReader.close(); // close reader
 
         } catch (FileNotFoundException e) { // basic catch exceptions
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-    }
+    }*/
 
     public static void intro() {
         System.out.println("Hello, you are at the NFL combine, you are here to show your abilities.");
