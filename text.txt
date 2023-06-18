@@ -1,0 +1,2 @@
+Names, Distance from dummy, angle, velocity, gravity,height
+1.Erin,20,30,25,9.8,10
